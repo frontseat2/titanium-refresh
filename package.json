@@ -13,7 +13,7 @@
 	"maintainers": [
 		"John Wana <john@wana.us>"
 	],
-	"homepage": "https://github.com/frontseat2/titanium-refresh",
+	"homepage": "http://tech.frontseat.org/2013/08/titanium-refresh-make-code-changes-without-rebooting-the-simulator/",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/frontseat2/titanium-refresh"
