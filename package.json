@@ -13,11 +13,13 @@
 	"maintainers": [
 		"John Wana <john@wana.us>"
 	],
+	"homepage": "https://github.com/frontseat2/titanium-refresh",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/frontseat2/titanium-refresh"
 	},
 	"license": "Apache v2",
+	"bin": { "titanium-refresh" : "./index.js" },
 	"dependencies": {
 		"optimist": "0.6.x",
 		"xml2js": "0.2.x"
