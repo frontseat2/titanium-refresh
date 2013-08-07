@@ -1,0 +1,25 @@
+{
+	"name": "titanium-refresh",
+	"title": "Titanium App Simulator Refresh",
+	"description": "Run your Titanium app changes without having to restart the simulator",
+	"keywords": [
+		"titanium",
+		"simulator",
+		"restart",
+		"reboot"
+	],
+	"version": "1.0.0",
+	"author": "John Wana",
+	"maintainers": [
+		"John Wana <john@wana.us>"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/frontseat2/titanium-refresh"
+	},
+	"license": "Apache v2",
+	"dependencies": {
+		"optimist": "*",
+		"xml2js": "*"
+	}
+}
