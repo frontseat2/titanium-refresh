@@ -11,7 +11,7 @@ The tool does the following:
 3. Show the log file output
 
 ## Usage
-Install the tool using npm: `npm install titanium-refresh`
+Install the tool using npm: `npm install -g titanium-refresh`
 
 Execute it from the terminal: `titanium-refresh`
 
