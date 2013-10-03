@@ -141,12 +141,13 @@ function monitorLog(paths, cb) {
 
       // find remaining log files
       // TODO: using setTimeout to wait for the simulator to appear and the logfile to be created isn't reliable
-      setTimeout(function() {
+      function watchLogFile() {
         var docFiles = fs.readdirSync(logDir);
         var logFiles = utils.filter(docFiles, function(file) { return utils.stringEndsWith(file, LOG_SUFFIX); });
 
         // show the log
         if (logFiles.length === 1) {
+          console.log("Showing logfile");
           var logFile = path.join(logDir, logFiles[0]);
           var prevStart = 0;
           fs.watchFile(logFile, {
@@ -160,10 +161,15 @@ function monitorLog(paths, cb) {
             prevStart = curr.size;
           });
           cb(null);
+        } else if (logFiles.length === 0) {
+          console.log("Waiting for logfile...");
+          setTimeout(watchLogFile, 100);
         } else {
           cb(new Error("Invalid number of log files " + logFiles.length));
         }
-      }, 1000);
+      }
+
+      watchLogFile();
     });
   });
 }
